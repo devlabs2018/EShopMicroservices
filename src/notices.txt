@@ -1,0 +1,15 @@
+-- docker-compose deploy
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+
+--Interactive mode with docker
+docker exec -it 4464cb5da1c5 bash
+
+-- access to the db server
+psql -U postgres
+
+--Connect to the DB
+ \c CatalogDb
+
+--list all table
+\d
+
